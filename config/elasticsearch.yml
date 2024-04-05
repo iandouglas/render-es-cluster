@@ -1,0 +1,9 @@
+cluster.name: "elasticsearch-cluster"
+node.roles: [ master, data ]
+discovery.type: multi-node
+cluster.initial_master_nodes: [ "elasticsearch-ltft-0", "elasticsearch-ltft-1" ]
+
+# bind to all network interfaces
+network.host: 0.0.0.0
+
+xpack.security.enabled: false

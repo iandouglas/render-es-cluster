@@ -1,0 +1,19 @@
+services:
+- type: pserv
+  name: elasticsearch-cluster
+  env: docker
+  plan: standard
+  disk:
+    name: esdata
+    mountPath: /usr/share/elasticsearch/data
+    sizeGB: 1
+  autoDeploy: false # so ES does not restart on a push to this repository.
+  scaling:
+    minInstances: 2         # Required
+    maxInstances: 3         # Required
+    targetMemoryPercent: 60 # Optional if targetCPUPercent is set (valid: 1-90)
+    targetCPUPercent: 60    # Optional if targetMemory is set (valid: 1-90)
+
+  envVars:
+  - key: ES_JAVA_OPTS
+    value: "-Xms512m -Xmx512m"

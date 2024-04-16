@@ -6,6 +6,10 @@ cluster.initial_master_nodes:
   - srv-co83i8i0si5c73b6ijag-0.elasticsearch-cluster:10000
   - srv-co83i8i0si5c73b6ijag-1.elasticsearch-cluster:10000
 
+discover.seed_hosts:
+  - srv-co83i8i0si5c73b6ijag-0.elasticsearch-cluster:10000
+  - srv-co83i8i0si5c73b6ijag-1.elasticsearch-cluster:10000
+
 # bind to all network interfaces
 network.host: 0.0.0.0
 

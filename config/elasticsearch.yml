@@ -6,7 +6,7 @@ discovery.type: multi-node
 #   - srv-co83i8i0si5c73b6ijag-0.elasticsearch-cluster:9300
 #   - srv-co83i8i0si5c73b6ijag-1.elasticsearch-cluster:9300
 
-discover.seed_hosts:
+discovery.seed_hosts:
   - srv-co83i8i0si5c73b6ijag-0.elasticsearch-cluster:9300
   - srv-co83i8i0si5c73b6ijag-1.elasticsearch-cluster:9300
 

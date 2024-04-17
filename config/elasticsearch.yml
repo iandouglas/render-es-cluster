@@ -16,3 +16,5 @@ transport.host: ["0.0.0.0"]
 
 xpack.security.enabled: false
 xpack.security.enrollment.enabled: true
+discovery.zen.minimum_master_nodes: 2
+bootstrap.mlockall: true

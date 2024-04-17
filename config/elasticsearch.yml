@@ -1,5 +1,5 @@
 cluster.name: "elasticsearch-cluster"
-node.roles: [ master, data ]
+# node.roles: [ master, data ]
 discovery.type: multi-node
 
 cluster.initial_master_nodes:
@@ -12,5 +12,6 @@ discovery.seed_hosts:
 
 # bind to all network interfaces
 network.host: ["0.0.0.0"]
+transport.host: ["0.0.0.0"]
 
 xpack.security.enabled: false

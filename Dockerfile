@@ -15,7 +15,10 @@ ENV NODE_TYPE $NODE_TYPE
 #RUN unzip /etc/elasticsearch/certs/nodes.zip -d /etc/elasticsearch/certs/
 
 # Copy our config file over
-COPY --chown=1000:0 config/${NODE_TYPE}-elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
+#COPY --chown=1000:0 config/${NODE_TYPE}-elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
+COPY --chown=1000:0 config/build.sh /usr/share/elasticsearch/
+RUN chmod +x /usr/share/elasticsearch/build.sh
+RUN /usr/share/elasticsearch/build.sh
 
 # Allow Elasticsearch to create `elasticsearch.keystore`
 # to circumvent https://github.com/elastic/ansible-elasticsearch/issues/430
